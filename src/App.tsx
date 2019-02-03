@@ -1,33 +1,11 @@
 import * as React from 'react';
+import { Header } from './components';
 
-interface Props {
+export const App: React.StatelessComponent<{}> = (props) => {
+  return (
+    <div className="container-fluid">
+      <Header />
+    </div>
+
+  );
 }
-interface State {
-  count: number;
-}
-
-export class App extends React.Component<Props, State> {
-  interval!: number;
-  state = { count: 0 };
-
-  componentWillMount() {
-    const incrementCounter = () => {
-      this.setState({ count: this.state.count + 1 });
-    };
-    this.interval = window.setInterval(incrementCounter, 1000);
-  }
-
-  componentWillUnmount() {
-    clearInterval(this.interval);
-  }
-
-  render() {
-    return (
-      <div>
-        <div>Counter: {this.state.count}</div>
-      </div>
-    );
-  }
-}
-
-export default App;
