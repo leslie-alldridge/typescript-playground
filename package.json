@@ -31,7 +31,7 @@
   },
   "dependencies": {
     "@types/node": "^10.12.21",
-    "bootstrap": "^4.1.2",
+    "bootstrap": "^4.3.1",
     "lc-form-validation": "^1.0.0",
     "react": "^16.4.1",
     "react-dom": ">=16.4.2",
